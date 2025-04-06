@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    font-family: 'Funnel Sans', sans-serif;
+    font-weight: 700;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+/* BUTTON */
+.create-grid-btn {
+    overflow: hidden;
+    position: relative;
+    padding: 10px 20px;
+    margin-bottom: 50px;
+    font-weight: 600;
+    color: #fff;
+    border: 2px solid rgb(0, 255, 55);
+    border-radius: 10px;
+    transition: all 0.7s ease;
+}
+
+.create-grid-btn span:first-child {
+    position: relative;
+    z-index: 1;
+}
+
+.create-grid-btn span:last-child {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-color: rgb(0, 255, 55);
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+
+.create-grid-btn:hover {
+    scale: 1.2;
+    background-color: rgb(0, 255, 55);
+    color: #111;
+}
+
+.create-grid-btn:hover span:last-child {
+    width: 150px;
+    height: 150px;
+    opacity: 1;
+}
+
+/* BOARD */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 500px;
+}
+
+.square {
+    background: #1d1d1d;
+    box-shadow: 0 0 2px #000;
+    margin: 2px;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
+    transition: 1.5s ease;
+}
+
+.square:hover {
+    transition-duration: 0s;
+}
